@@ -5,7 +5,7 @@ var arrayTasks = {
   },
 
   insertAt: function (arr, itemToAdd, index) {
-    arr.splice(index, 0, itemToAdd);
+     arr.splice(index, 0, itemToAdd);
     return arr;
   },
 
@@ -13,7 +13,7 @@ var arrayTasks = {
     let sqrdNumbers = [];
 
     arr.forEach(function (number) {
-      sqNum = number * number;
+      sqNum = number ** 2;
       sqrdNumbers.push(sqNum);
     });
     return sqrdNumbers;
@@ -41,6 +41,8 @@ var arrayTasks = {
     return duplicates;
   },
 
+
+
   removeAndClone: function (arr, valueToRemove) {
     let uniqueNums = [];
 
@@ -66,11 +68,11 @@ var arrayTasks = {
     return arr
       .filter(function (number) { //scans over array
         return (number % 2 === 0) //returning boolean, if true, keeps it in array
-      }).map(function (number) { //map loops over array, creates and array of values I return
+      }).map(function (number) { //map loops over array, creates and array of values I return in next line
         return number ** 2;
       }).reduce(function (total, sqrdNumber) { //loops the array, the current array is only sqrdNumbers
         return total + sqrdNumber; // pretty much forEach in the array and adding to total
-      }, 0); //this is original total   
+      }, 0); //this is original total  
   }
 };
 
